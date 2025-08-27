@@ -1,0 +1,382 @@
+/* AVRX TECH — Dark Blue Professional Theme */
+:root{
+  --bg:#0a1027;
+  --bg-soft:#0f1738;
+  --text:#eef2ff;
+  --muted:#c7ccee;
+  --brand:#6a5cff;
+  --brand-2:#ff6ac1;
+  --card:#111942;
+  --line:#23305c;
+  --chip:#17214a;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+*{
+  box-sizing:border-box
+}
+html,body{
+  margin:0;padding:0
+}
+body{
+  font-family:'Inter',system-ui,Segoe UI,Arial,Helvetica,sans-serif;
+  background: radial-gradient(
+    1200px 800px at 80% -10%, 
+    rgba(106,92,255,.18),
+     transparent 60%
+     ) , 
+     var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+/* Utilities */
+.container{
+   width:min(1120px, 92%); 
+   margin:0 auto
+}
+.section{
+  padding:80px 0
+}
+.section.alt{
+  background:linear-gradient(
+    180deg, rgba(
+      255,255,255,.02
+      ),transparent
+      )
+}
+.section-title{
+  font-size:34px; 
+  margin:0 0 10px; 
+  letter-spacing:.2px
+}
+.section-sub{
+  margin:0 0 28px; 
+  color:var(--muted)
+}
+
+/* Header */
+.site-header{
+  position:sticky; 
+  top:0; 
+  z-index:1000;
+  backdrop-filter:saturate(120%) blur(8px);
+  background:rgba(10,16,39,.55);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.nav{
+  display:flex; 
+  align-items:center; 
+  justify-content:space-between; 
+  padding:12px 0; 
+  gap:12px
+}
+.brand{
+  display:flex;
+   align-items:center; 
+   gap:10px; 
+   color:var(--text); 
+   text-decoration:none; 
+   font-weight:800; 
+   letter-spacing:.3px
+  }
+.brand img{
+  width:40px; 
+  height:40px
+} 
+nav a{
+  color:var(--muted); 
+  text-decoration:none; 
+  margin-left:18px; 
+  font-weight:600
+}
+nav a:hover{
+  color:var(--text)
+}
+nav .cta{
+  padding:10px 16px; 
+  border:1px solid var(--line); 
+  border-radius:14px
+}
+.menu-btn{
+  display:none; 
+  font-size:24px; 
+  background:none; 
+  color:var(--text); 
+  border:none
+}
+
+/* Hero */
+.hero{
+  position:relative; 
+  padding:120px 0 80px
+}
+.hero-grid{
+  display:grid; 
+  grid-template-columns: 1.2fr .8fr; 
+  gap:40px; 
+  align-items:center
+}
+.kicker{
+  color:var(--brand); 
+  font-weight:700; 
+  letter-spacing:.2em; 
+  text-transform:uppercase
+}
+.hero h1{
+  font-size:52px; 
+  line-height:1.1; 
+  margin:6px 0 14px
+}
+.hero .sub{
+  color:var(--muted); 
+  max-width:58ch
+}
+.actions{
+  display:flex; 
+  gap:14px; 
+  margin-top:18px
+}
+.btn{
+  display:inline-block; 
+  padding:12px 18px; 
+  border-radius:14px; 
+  text-decoration:none; 
+  font-weight:700; 
+  border:1px solid transparent
+}
+.btn.primary{
+  background:linear-gradient(135deg, var(--brand) Blue, var(--brand-2)pink);
+  color:white; 
+  box-shadow:var(--shadow)
+}
+.btn.ghost{
+  border-color:var(--line); 
+  color:var(--text)
+}
+.hero-card{
+  display:grid; 
+  grid-template-columns:repeat(2,1fr); 
+  gap:16px;
+}
+.stat{
+  background:var(--card); 
+  padding:18px; 
+  border-radius:16px; 
+  border:1px solid var(--line); 
+  box-shadow:var(--shadow)
+}
+.stat .num{
+  display:block; 
+  font-size:32px; 
+  font-weight:800
+}
+.stat .lbl{
+  color:var(--muted)
+}
+
+.gradient{
+  position:absolute; 
+  inset:0; 
+  pointer-events:none;
+  background: 
+  radial-gradient(
+  400px 280px at 10% 20%,
+  rgba(255,106,193,.15), 
+  transparent 70%
+  ),
+  radial-gradient(
+  400px 280px at 90% 10%, 
+  rgba(106,92,255,.18), 
+  transparent 70%
+);
+}
+
+/* Cards */
+.grid.cards{
+  display:grid; 
+  grid-template-columns: repeat
+  ( auto-fit, minmax
+  (250px, 1fr) 
+  ); 
+  gap:18px;
+}
+.card{
+  background:var(--card); 
+  border:1px solid var(--line); 
+  padding:22px; 
+  border-radius:18px; 
+  box-shadow:var(--shadow)
+}
+.card h3{
+  margin:0 0 8px
+}
+
+.card p{
+  margin:0 0 10px; 
+  color:var(--muted)
+}
+.card ul{
+  padding-left:18px; 
+  margin:0; 
+  color:var(--muted)
+}
+
+/* Technologies */
+.tech-groups{
+  display:grid; 
+  grid-template-columns: repeat
+  ( auto-fit, minmax
+  (260px,1fr) 
+  ); 
+  gap:20px
+}
+.tech-col{
+  background:var(--card); 
+  border:1px solid var(--line); 
+  padding:18px; 
+  border-radius:18px
+}
+.chips{
+  display:flex; 
+  flex-wrap:wrap; 
+  gap:8px; padding:0; 
+  list-style:none
+}
+.chips li{
+  padding:8px 12px; 
+  border:1px solid var(--line); 
+  background:var(--chip); 
+  color:var(--text); 
+  border-radius:999px; 
+  font-weight:600; 
+  font-size:14px
+}
+
+/* Work */
+.grid.work{
+  display:grid; 
+  grid-template-columns: repeat
+  ( auto-fit, minmax
+  (260px, 1fr) 
+  ); 
+  gap:18px
+}
+.work-item{
+  background:var(--card); 
+  border:1px solid var(--line); 
+  padding:16px; 
+  border-radius:16px
+}
+.shot{
+  height:140px; 
+  border-radius:12px; 
+  background:linear-gradient
+  (135deg,
+   rgba(106,92,255,.3),
+     rgba(255,106,193,.28)
+     ); 
+     border:1px solid var(--line)
+    }
+
+/* Contact */
+.contact-wrap{
+  display:grid; 
+  grid-template-columns: .8fr 1.2fr; 
+  gap:20px; 
+  align-items:center
+}
+.contact-card{
+  background:var(--card); 
+  border:1px solid var(--line); 
+  padding:22px; 
+  border-radius:18px; 
+  text-align:center
+}
+.contact-logo{
+  width:60px; 
+  height:60px
+}
+.tag{
+  color:var(--muted); 
+  margin:6px 0 10px
+}
+.addr{
+  color:var(--muted)
+}
+.contact-links{
+  display:flex; 
+  flex-direction:column; 
+  gap:12px
+}
+.socials{
+  display:flex; 
+  flex-wrap:wrap; 
+  gap:14px
+}
+.socials a{
+  color:var(--text); 
+  text-decoration:none; 
+  border-bottom:1px dashed var(--line)
+}
+.socials a:hover{
+  color:var(--muted)
+}
+
+/* Footer */
+.footer{
+  padding:26px 0; 
+  border-top:1px solid rgba(255,255,255,.08); 
+  background:rgba(10,16,39,.6)
+}
+.foot{
+  display:flex; 
+  align-items:center; 
+  justify-content:space-between; 
+  color:var(--muted)
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .hero-grid{
+    grid-template-columns:1fr
+  }
+  .contact-wrap{
+    grid-template-columns:1fr
+  }
+  nav{
+    display:none
+  }
+  .menu-btn{
+    display:block
+  }
+}
+
+
+
+#services {
+  background-color: #0b3817; /* Light Blue for Services */
+}
+
+#technologies {
+  background-color: #205f74; /* Light Blue for Technologies */
+}
+#contact {
+  background-color: #ccdde2; /* Light Blue for Contact */
+}
+
+
+#work {
+  background-color: #add8e6; /* Light Blue for Work */
+}
+/* Languages chips colors */
+#technologies .chips li:nth-child(1) { background-color: #f7df1e; color: #000; } /* JavaScript (yellow) */
+#technologies .chips li:nth-child(2) { background-color: #3178c6; color: #fff; } /* TypeScript (blue) */
+#technologies .chips li:nth-child(3) { background-color: #3776ab; color: #fff; } /* Python */
+#technologies .chips li:nth-child(4) { background-color: #b07219; color: #fff; } /* Java */
+#technologies .chips li:nth-child(5) { background-color: #68217a; color: #fff; } /* C# */
+#technologies .chips li:nth-child(6) { background-color: #8892be; color: #fff; } /* PHP */
+#technologies .chips li:nth-child(7) { background-color: #00add8; color: #fff; } /* Go */
+#technologies .chips li:nth-child(8) { background-color: #ffac45; color: #000; } /* Swift */
+#technologies .chips li:nth-child(9) { background-color: #a97bff; color: #fff; } /* Kotlin */
+#technologies .chips li:nth-child(10) { background-color: #336791; color: #fff; } /* SQL */
